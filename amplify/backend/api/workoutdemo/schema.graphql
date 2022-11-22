@@ -1,3 +1,11 @@
+type Back @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  demo: AWSURL
+  steps: String
+  area: String
+}
+
 type Workout @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String
@@ -5,3 +13,4 @@ type Workout @model @auth(rules: [{allow: public}]) {
   steps: String
   area: String
 }
+ 

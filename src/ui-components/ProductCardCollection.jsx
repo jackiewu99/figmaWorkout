@@ -8,6 +8,7 @@
 import * as React from "react";
 import { Workout } from "../models";
 import {
+  createDataStorePredicate,
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
@@ -15,9 +16,12 @@ import ProductCard from "./ProductCard";
 import { Collection } from "@aws-amplify/ui-react";
 export default function ProductCardCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
+  const itemsFilterObj = { field: "area", operand: "chest", operator: "eq" };
+  const itemsFilter = createDataStorePredicate(itemsFilterObj);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
     model: Workout,
+    criteria: itemsFilter,
   }).items;
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (

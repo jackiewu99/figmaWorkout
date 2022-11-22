@@ -37,5 +37,7 @@ export { default as ItemCard } from "./ItemCard";
 export { default as ProductCardCollection } from "./ProductCardCollection";
 export { default as ActionCard } from "./ActionCard";
 export { default as studioTheme } from "./studioTheme";
+export { default as BackCreateForm } from "./BackCreateForm";
+export { default as BackUpdateForm } from "./BackUpdateForm";
 export { default as WorkoutCreateForm } from "./WorkoutCreateForm";
 export { default as WorkoutUpdateForm } from "./WorkoutUpdateForm";
