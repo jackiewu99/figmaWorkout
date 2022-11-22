@@ -5,12 +5,16 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Workout } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ReviewCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    workout?: Workout;
+import { ProductCardProps } from "./ProductCard";
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type ProductCardCollectionsProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: (collectionItem: {
+        item: any;
+        index: number;
+    }) => ProductCardProps;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ReviewCard(props: ReviewCardProps): React.ReactElement;
+export default function ProductCardCollections(props: ProductCardCollectionsProps): React.ReactElement;

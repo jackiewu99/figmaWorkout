@@ -6,7 +6,10 @@ import {
 //testing
 function App() {
   return (
+    <div>
+      <h2>Home</h2>
     <ProductCardCollection />
+    </div>
   );
 }
 
