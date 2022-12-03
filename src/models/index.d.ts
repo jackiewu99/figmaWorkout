@@ -46,40 +46,6 @@ export declare const Workout2x2: (new (init: ModelInit<Workout2x2>) => Workout2x
   copyOf(source: Workout2x2, mutator: (draft: MutableModel<Workout2x2>) => MutableModel<Workout2x2> | void): Workout2x2;
 }
 
-type EagerBack = {
-  readonly [__modelMeta__]: {
-    identifier: ManagedIdentifier<Back, 'id'>;
-    readOnlyFields: 'createdAt' | 'updatedAt';
-  };
-  readonly id: string;
-  readonly name?: string | null;
-  readonly demo?: string | null;
-  readonly steps?: string | null;
-  readonly area?: string | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-}
-
-type LazyBack = {
-  readonly [__modelMeta__]: {
-    identifier: ManagedIdentifier<Back, 'id'>;
-    readOnlyFields: 'createdAt' | 'updatedAt';
-  };
-  readonly id: string;
-  readonly name?: string | null;
-  readonly demo?: string | null;
-  readonly steps?: string | null;
-  readonly area?: string | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-}
-
-export declare type Back = LazyLoading extends LazyLoadingDisabled ? EagerBack : LazyBack
-
-export declare const Back: (new (init: ModelInit<Back>) => Back) & {
-  copyOf(source: Back, mutator: (draft: MutableModel<Back>) => MutableModel<Back> | void): Back;
-}
-
 type EagerWorkout = {
   readonly [__modelMeta__]: {
     identifier: ManagedIdentifier<Workout, 'id'>;

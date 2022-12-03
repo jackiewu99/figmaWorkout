@@ -1,9 +1,9 @@
 import React from "react";
 import { 
     ProductCardCollection 
-  } from '../ui-components';
+  } from '../../ui-components';
 
-function exercise(){
+function chest(){
     return (
         <div>
             <ProductCardCollection />
@@ -11,4 +11,4 @@ function exercise(){
     )
 }  
 
-  export default exercise;
+  export default chest;

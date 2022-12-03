@@ -6,22 +6,18 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { Workout2x2 } from "../models";
+import { Workout } from "../models";
 import {
-  createDataStorePredicate,
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import FeaturesText2x2 from "./FeaturesText2x2";
+import ActionCard from "./ActionCard";
 import { Collection } from "@aws-amplify/ui-react";
-export default function FeaturesText2x2Collection(props) {
+export default function Test(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const itemsFilterObj = { field: "area", operand: "arms", operator: "eq" };
-  const itemsFilter = createDataStorePredicate(itemsFilterObj);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
-    model: Workout2x2,
-    criteria: itemsFilter,
+    model: Workout,
   }).items;
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
@@ -31,14 +27,13 @@ export default function FeaturesText2x2Collection(props) {
       justifyContent="left"
       items={items || []}
       {...rest}
-      {...getOverrideProps(overrides, "FeaturesText2x2Collection")}
+      {...getOverrideProps(overrides, "Test")}
     >
       {(item, index) => (
-        <FeaturesText2x2
-          workout2x2={item}
+        <ActionCard
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></FeaturesText2x2>
+        ></ActionCard>
       )}
     </Collection>
   );

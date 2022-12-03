@@ -6,21 +6,21 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { Workout2x2 } from "../models";
+import { Workout } from "../models";
 import {
   createDataStorePredicate,
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import FeaturesText2x2 from "./FeaturesText2x2";
+import ProductCard from "./ProductCard";
 import { Collection } from "@aws-amplify/ui-react";
-export default function FeaturesText2x2Collection(props) {
+export default function BackCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const itemsFilterObj = { field: "area", operand: "arms", operator: "eq" };
+  const itemsFilterObj = { field: "area", operand: "Back", operator: "eq" };
   const itemsFilter = createDataStorePredicate(itemsFilterObj);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
-    model: Workout2x2,
+    model: Workout,
     criteria: itemsFilter,
   }).items;
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
@@ -31,14 +31,14 @@ export default function FeaturesText2x2Collection(props) {
       justifyContent="left"
       items={items || []}
       {...rest}
-      {...getOverrideProps(overrides, "FeaturesText2x2Collection")}
+      {...getOverrideProps(overrides, "BackCollection")}
     >
       {(item, index) => (
-        <FeaturesText2x2
-          workout2x2={item}
+        <ProductCard
+          workout={item}
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></FeaturesText2x2>
+        ></ProductCard>
       )}
     </Collection>
   );

@@ -9,18 +9,11 @@ type Workout2x2 @model @auth(rules: [{allow: public}]) {
   rep2: String
 }
 
-type Back @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  name: String
-  demo: AWSURL
-  steps: String
-  area: String
-}
-
 type Workout @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String
   demo: AWSURL
   steps: String
   area: String
-} 
+}
+ 
