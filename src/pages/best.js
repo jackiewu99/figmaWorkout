@@ -1,9 +1,12 @@
 import React from "react";
-
+import { 
+    TopTen 
+  } from '../ui-components';
 function best(){
     return (
-        <div>
-            <h2>best page</h2>
+        <div align = 'center'>
+            <h2>TOP 10 BEST EXERCISES</h2>
+            <TopTen />
         </div>
     )
 }  

@@ -1,3 +1,12 @@
+type Ranking @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  rank: Int
+  name: String
+  demo: AWSURL
+  desc: String
+  desc2: String
+}
+
 type Workout2x2 @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String

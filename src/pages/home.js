@@ -2,7 +2,7 @@ import React from "react";
 
 function home(){
     return (
-        <div>
+        <div align = 'center'>
             <h1>Cloud Computing Project</h1>
             <h2>
                 Our project is a remake of the website of https://dumbbell-exercises.com/best-dumbbell-exercises/<br />

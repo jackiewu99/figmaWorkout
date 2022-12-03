@@ -5,14 +5,16 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Ranking } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type HeroLayout1Props = React.PropsWithChildren<Partial<FlexProps> & {
-    ranking?: Ranking;
-} & {
-    mode?: "Light";
+import { HeroLayout1Props } from "./HeroLayout1";
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type TopTenProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: (collectionItem: {
+        item: any;
+        index: number;
+    }) => HeroLayout1Props;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function HeroLayout1(props: HeroLayout1Props): React.ReactElement;
+export default function TopTen(props: TopTenProps): React.ReactElement;

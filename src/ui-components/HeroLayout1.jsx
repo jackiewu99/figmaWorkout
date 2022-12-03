@@ -11,18 +11,18 @@ import {
   getOverridesFromVariants,
   mergeVariantsAndOverrides,
 } from "@aws-amplify/ui-react/internal";
-import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
+import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function HeroLayout1(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { ranking, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       overrides: {
+        Rank: {},
         "LOREM IPSUM": {},
         "Ut enim ad minim veniam quis nostrud": {},
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.":
           {},
         Message: {},
-        Button: {},
         HeroMessage: {},
         Left: {},
         image: {},
@@ -30,24 +30,6 @@ export default function HeroLayout1(props) {
         HeroLayout1: {},
       },
       variantValues: { mode: "Light" },
-    },
-    {
-      overrides: {
-        "LOREM IPSUM": { color: "rgba(255,255,255,1)" },
-        "Ut enim ad minim veniam quis nostrud": {
-          color: "rgba(255,255,255,1)",
-        },
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.":
-          { color: "rgba(255,255,255,1)" },
-        Message: {},
-        Button: {},
-        HeroMessage: {},
-        Left: { backgroundColor: "rgba(0,0,0,1)" },
-        image: { width: "unset", alignSelf: "stretch" },
-        Right: {},
-        HeroLayout1: {},
-      },
-      variantValues: { mode: "Dark" },
     },
   ];
   const overrides = mergeVariantsAndOverrides(
@@ -86,6 +68,27 @@ export default function HeroLayout1(props) {
         display="flex"
         {...getOverrideProps(overrides, "Left")}
       >
+        <Text
+          fontFamily="Inter"
+          fontSize="20px"
+          fontWeight="700"
+          color="rgba(0,0,0,1)"
+          lineHeight="30px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="168px"
+          height="60px"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={ranking?.rank}
+          {...getOverrideProps(overrides, "Rank")}
+        ></Text>
         <Flex
           gap="24px"
           direction="column"
@@ -119,7 +122,7 @@ export default function HeroLayout1(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="LOREM IPSUM"
+            children={ranking?.name}
             {...getOverrideProps(overrides, "LOREM IPSUM")}
           ></Text>
           <Flex
@@ -138,8 +141,8 @@ export default function HeroLayout1(props) {
           >
             <Text
               fontFamily="Inter"
-              fontSize="24px"
-              fontWeight="600"
+              fontSize="16px"
+              fontWeight="400"
               color="rgba(13,26,38,1)"
               lineHeight="30px"
               textAlign="center"
@@ -155,7 +158,7 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Ut enim ad minim veniam quis nostrud"
+              children={ranking?.desc}
               {...getOverrideProps(
                 overrides,
                 "Ut enim ad minim veniam quis nostrud"
@@ -181,21 +184,13 @@ export default function HeroLayout1(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+              children={ranking?.desc2}
               {...getOverrideProps(
                 overrides,
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
               )}
             ></Text>
           </Flex>
-          <Button
-            shrink="0"
-            size="large"
-            isDisabled={false}
-            variation="primary"
-            children="Primary Button"
-            {...getOverrideProps(overrides, "Button")}
-          ></Button>
         </Flex>
       </Flex>
       <Flex
@@ -228,6 +223,7 @@ export default function HeroLayout1(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           objectFit="cover"
+          src={ranking?.demo}
           {...getOverrideProps(overrides, "image")}
         ></Image>
       </Flex>

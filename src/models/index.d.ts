@@ -6,6 +6,42 @@ import { LazyLoading, LazyLoadingDisabled } from "@aws-amplify/datastore";
 
 
 
+type EagerRanking = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Ranking, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly rank?: number | null;
+  readonly name?: string | null;
+  readonly demo?: string | null;
+  readonly desc?: string | null;
+  readonly desc2?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyRanking = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Ranking, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly rank?: number | null;
+  readonly name?: string | null;
+  readonly demo?: string | null;
+  readonly desc?: string | null;
+  readonly desc2?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type Ranking = LazyLoading extends LazyLoadingDisabled ? EagerRanking : LazyRanking
+
+export declare const Ranking: (new (init: ModelInit<Ranking>) => Ranking) & {
+  copyOf(source: Ranking, mutator: (draft: MutableModel<Ranking>) => MutableModel<Ranking> | void): Ranking;
+}
+
 type EagerWorkout2x2 = {
   readonly [__modelMeta__]: {
     identifier: ManagedIdentifier<Workout2x2, 'id'>;
