@@ -132,7 +132,7 @@ export default function ProductCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="“This is a quote.“"
+            children={workout?.area}
             {...getOverrideProps(overrides, "\u201CThis is a quote.\u201C")}
           ></Text>
         </Flex>

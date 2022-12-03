@@ -5,12 +5,16 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Workout2x2 } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type TallCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    workout2x2?: Workout2x2;
+import { FeaturesText2x2Props } from "./FeaturesText2x2";
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type ButtocksTwoProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: (collectionItem: {
+        item: any;
+        index: number;
+    }) => FeaturesText2x2Props;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function TallCard(props: TallCardProps): React.ReactElement;
+export default function ButtocksTwo(props: ButtocksTwoProps): React.ReactElement;
