@@ -5,13 +5,13 @@ import './navbar.css';
 
 function navbar(){
     return(
-        <div class ="navbar">
+        <div className ="navbar">
             <div><Link to='/home'>Home</Link></div>
             <div><Link to='/workouts'>Dumbell Workouts</Link></div>
-            <div class = "dropdown">
-                <button class="dropbtn">Exercise 
+            <div className = "dropdown">
+                <button className="dropbtn">Exercise 
                 </button>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                     <div>Abdominals</div>
                     <div>Back</div>
                     <div>Biceps</div>

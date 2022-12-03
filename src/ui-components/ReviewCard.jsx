@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
+import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function ReviewCard(props) {
   const { workout, overrides, ...rest } = props;
   return (
@@ -65,56 +65,6 @@ export default function ReviewCard(props) {
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Title")}
         >
-          <Flex
-            gap="8px"
-            direction="row"
-            width="unset"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            shrink="0"
-            alignSelf="stretch"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame")}
-          >
-            <Text
-              fontFamily="Inter"
-              fontSize="5px"
-              fontWeight="400"
-              color="rgba(92,102,112,1)"
-              lineHeight="24px"
-              textAlign="left"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              grow="1"
-              shrink="1"
-              basis="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children={workout?.area}
-              {...getOverrideProps(overrides, "hello")}
-            ></Text>
-            <View
-              width="24px"
-              height="24px"
-              display="block"
-              gap="unset"
-              alignItems="unset"
-              justifyContent="unset"
-              overflow="hidden"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Icon")}
-            ></View>
-          </Flex>
           <Text
             fontFamily="Inter"
             fontSize="10px"

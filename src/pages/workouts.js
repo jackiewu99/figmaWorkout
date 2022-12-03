@@ -1,9 +1,11 @@
 import React from "react";
-
+import { 
+    ArmsTwoByTwo 
+  } from './ui-components';
 function workouts(){
     return (
         <div>
-            <h2>THIS IS Dumbell Workouts</h2>
+            <ArmsTwoByTwo />
         </div>
     )
 }  
