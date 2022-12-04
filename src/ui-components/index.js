@@ -9,6 +9,7 @@ export { default as HeroLayout4 } from "./HeroLayout4";
 export { default as ProductDetail } from "./ProductDetail";
 export { default as StandardCard } from "./StandardCard";
 export { default as MarketingPricing } from "./MarketingPricing";
+export { default as Triceps } from "./Triceps";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as TopTen } from "./TopTen";
 export { default as ProductCard } from "./ProductCard";

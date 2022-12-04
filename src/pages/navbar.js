@@ -19,7 +19,7 @@ function navbar(){
                     <div><Link to ='/forearms'>Forearms</Link></div>
                     <div>Legs</div>
                     <div><Link to ='/shoulders'>Shoulders</Link></div>
-                    <div>Triceps</div>
+                    <div><Link to ='/triceps'>Triceps</Link></div>
                 </div>
             </div>
             <div><Link to='/best'>Best Exercise</Link></div>
