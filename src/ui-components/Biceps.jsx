@@ -14,9 +14,9 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import ProductCard from "./ProductCard";
 import { Collection } from "@aws-amplify/ui-react";
-export default function ProductCardCollection(props) {
+export default function Biceps(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const itemsFilterObj = { field: "area", operand: "Chest", operator: "eq" };
+  const itemsFilterObj = { field: "area", operand: "Biceps", operator: "eq" };
   const itemsFilter = createDataStorePredicate(itemsFilterObj);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
@@ -31,7 +31,7 @@ export default function ProductCardCollection(props) {
       justifyContent="left"
       items={items || []}
       {...rest}
-      {...getOverrideProps(overrides, "ProductCardCollection")}
+      {...getOverrideProps(overrides, "Biceps")}
     >
       {(item, index) => (
         <ProductCard
