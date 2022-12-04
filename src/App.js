@@ -9,6 +9,7 @@ import {Route, Routes} from 'react-router-dom';
 import Back from './pages/dropdown/back'
 import Shoulders from './pages/dropdown/shoulders'
 import Forearms from './pages/dropdown/forearms'
+import Biceps from './pages/dropdown/biceps'
 
 
 //testing
@@ -24,6 +25,7 @@ function App() {
     <Route path="/back" element={<Back/>} />
     <Route path="/shoulders" element={<Shoulders/>} />
     <Route path="/forearms" element={<Forearms/>} />
+    <Route path="/biceps" element={<Biceps/>} />
     </Routes>
     </div>
   );

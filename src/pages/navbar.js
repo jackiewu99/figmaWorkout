@@ -14,7 +14,7 @@ function navbar(){
                 <div className="dropdown-content">
                     <div>Abdominals</div>
                     <div><Link to ='/Back'>Back</Link></div>
-                    <div>Biceps</div>
+                    <div><Link to ='/biceps'>Biceps</Link></div>
                     <div><Link to ='/chest'>Chest</Link></div>
                     <div><Link to ='/forearms'>Forearms</Link></div>
                     <div>Legs</div>
