@@ -15,11 +15,11 @@ export default function FeaturesText2x2(props) {
       gap="10px"
       direction="column"
       width="700px"
-      height="372px"
+      height="400px"
       justifyContent="flex-start"
       alignItems="center"
       position="relative"
-      padding="0px 0px 50px 0px"
+      padding="10px 0px 50px 0px"
       backgroundColor="rgba(0,0,0,1)"
       {...rest}
       {...getOverrideProps(overrides, "FeaturesText2x2")}
