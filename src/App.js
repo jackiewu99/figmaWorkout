@@ -11,7 +11,8 @@ import Shoulders from './pages/dropdown/shoulders'
 import Forearms from './pages/dropdown/forearms'
 import Biceps from './pages/dropdown/biceps'
 import Triceps from './pages/dropdown/triceps'
-
+import Legs from './pages/dropdown/legs'
+import Abs from './pages/dropdown/abs'
 
 //testing
 function App() {
@@ -28,6 +29,8 @@ function App() {
     <Route path="/forearms" element={<Forearms/>} />
     <Route path="/biceps" element={<Biceps/>} />
     <Route path="/triceps" element={<Triceps/>} />
+    <Route path="/legs" element={<Legs/>} />
+    <Route path="/abs" element={<Abs/>} />
     </Routes>
     </div>
   );

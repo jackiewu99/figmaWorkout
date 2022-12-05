@@ -6,6 +6,7 @@
 
 export { default as EditProfile } from "./EditProfile";
 export { default as HeroLayout4 } from "./HeroLayout4";
+export { default as Legs } from "./Legs";
 export { default as ProductDetail } from "./ProductDetail";
 export { default as StandardCard } from "./StandardCard";
 export { default as MarketingPricing } from "./MarketingPricing";
@@ -13,6 +14,7 @@ export { default as Triceps } from "./Triceps";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as TopTen } from "./TopTen";
 export { default as ProductCard } from "./ProductCard";
+export { default as Abs } from "./Abs";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as SideBar } from "./SideBar";

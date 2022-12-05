@@ -12,12 +12,12 @@ function navbar(){
                 <button className="dropbtn">Exercise 
                 </button>
                 <div className="dropdown-content">
-                    <div>Abdominals</div>
+                    <div><Link to ='/abs'>Abdominals</Link></div>
                     <div><Link to ='/Back'>Back</Link></div>
                     <div><Link to ='/biceps'>Biceps</Link></div>
                     <div><Link to ='/chest'>Chest</Link></div>
                     <div><Link to ='/forearms'>Forearms</Link></div>
-                    <div>Legs</div>
+                    <div><Link to ='/legs'>Legs</Link></div>
                     <div><Link to ='/shoulders'>Shoulders</Link></div>
                     <div><Link to ='/triceps'>Triceps</Link></div>
                 </div>
