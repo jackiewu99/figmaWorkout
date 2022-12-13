@@ -10,7 +10,9 @@ function home(){
                 Amplify is used for both front and backend hosting.<br />
                 Dynamodb allows us to create a database and store our exercises.<br />
                 We used IAM to create a service role for Amplify backend deployment. <br />
-                This allowed our frontend and backend to be able to connect with eachother and host properly. 
+                This allowed our frontend and backend to be able to connect with eachother and host properly. <br />
+                IAM
+
             </h2>
         </div>
     )

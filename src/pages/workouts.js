@@ -10,7 +10,7 @@ import {
 } from "../ui-components";
 function workouts() {
   return (
-    <div>
+    <div  >
       <h1>Dumbbell Workout Routines</h1>
       <h2>
         The following dumbbell workout routines can be performed using dumbbell
